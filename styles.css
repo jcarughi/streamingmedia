@@ -52,6 +52,9 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 #trending ::-webkit-scrollbar {
     background-color: rgba(92, 9, 9, 0.438)
@@ -93,6 +96,8 @@ audio::-webkit-media-controls-enclosure {
     background-color: rgba(235, 235, 235, 0.63);
 }
 
+
+
 html {
     box-sizing: border-box;
     background-color: #020659;
@@ -110,7 +115,9 @@ body {
 header {
     background: linear-gradient(90deg, #030A8C,#020659,#000000) border-box;
     color: #FFFFFF;
-    margin: 0 0 85px 0;
+    margin-bottom: 85px;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 35px;
     padding-right: 40px;
     height: 200px;
@@ -161,6 +168,7 @@ li {
 li:first-child {
     font-variant: small-caps;
     position: absolute;
+    margin-top: 0;
     margin-left: 40px;
     top: -15px;
 }
@@ -266,6 +274,7 @@ a.tab:hover {
     overflow: scroll;
     width: 415px;
     margin-bottom: 15px;
+    overflow-y: hidden;
 }
 
 .TrendingSongs section {
@@ -439,6 +448,7 @@ audio[controls] {
 
     header {
         height: auto;
+        grid-area: header;
     }
 
     header p {
@@ -450,6 +460,7 @@ audio[controls] {
     }
 
     nav {
+        grid-area: nav;
         width: 834px;
         flex-direction: row;
         margin-left: 0;
@@ -474,6 +485,11 @@ audio[controls] {
 
     a.menu_links {
         text-align: center;
+        width: 135px;
+    }
+
+    footer {
+        grid-area: footer;
     }
 
     .TrendingSongs {
@@ -481,6 +497,7 @@ audio[controls] {
     }
 
     #trending {
+        grid-area: trending;
         display: flex;
         flex-direction: column;
     }
@@ -502,12 +519,24 @@ audio[controls] {
     }
 
     #playlists {
+        grid-area: playlists;
         display: flex;
         flex-direction: column;
     }
 
+    #playlists img {
+        margin-top: 0;
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+
     #playlists div {
         width: 415px;
+        height: 290px;
+        overflow-x: hidden;
+        overflow: scroll;
+        display: block;
     }
 
     #playlists p {
@@ -520,12 +549,14 @@ audio[controls] {
     }
 
     #curated {
+        grid-area: curated;
         display: flex;
         flex-direction: column;
     }
 
     #curated div {
         width: 415px;
+        overflow-x: hidden;
     }
 
 
