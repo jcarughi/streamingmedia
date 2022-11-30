@@ -59,9 +59,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 #trending ::-webkit-scrollbar {
     background-color: rgba(92, 9, 9, 0.438)
 }
-#trending ::-webkit-scrollbar-track {
 
-}
 #trending ::-webkit-scrollbar-thumb {
     background-color: #590242;
     border-radius: 10px;
@@ -146,7 +144,7 @@ nav {
     position: absolute;
     width: 415px;
     margin-left: -20px;
-    padding-top: 15px;
+    padding-top: 19px;
 }
 
 label {
@@ -191,7 +189,7 @@ a {
     color: #FFFFFF;
 }
 
-a:hover {
+nav a:hover {
     background-color: #590242;
 }
 
@@ -238,9 +236,10 @@ footer {
     border-radius: 5px;
     font-size: 15px;
     width: 210px;
-    padding: 5px 30px;
+    padding: 5px 45px;
     margin-top: 5px;
     margin-left: 35px;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 
@@ -255,8 +254,9 @@ a.tab:hover {
 }
 
 #trending h2 {
-    margin-bottom: -50px;
+    margin-bottom: -60px;
     margin-left: 25px;
+    margin-top: 30px;
 }
 
 #trending h3 {
@@ -273,7 +273,7 @@ a.tab:hover {
     display: flex;
     overflow: scroll;
     width: 415px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     overflow-y: hidden;
 }
 
@@ -282,7 +282,7 @@ a.tab:hover {
     height: 381px;
     min-width: 311px;
     margin-bottom: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .TrendingSongs div {
@@ -367,7 +367,7 @@ audio[controls] {
 #curated {
     background-color: #FFFFFF;
     color: #FFFFFF;
-    width: 415px;
+    width: 418px;
 }
 
 #curated h2 {
@@ -379,7 +379,7 @@ audio[controls] {
     display: flex;
     overflow: scroll;
     background-color: #030A8C;
-    width: 415px;
+    width: 419px;
 }
 
 #curated section {
@@ -535,9 +535,9 @@ audio[controls] {
 
     #playlists div {
         width: 415px;
-        height: 290px;
+        height: 450px;
         overflow-x: hidden;
-        overflow: scroll;
+        overflow: auto;
         display: block;
     }
 
@@ -546,8 +546,15 @@ audio[controls] {
         flex-direction: row;
     }
 
-    #playlists p, #playlists h3 {
-        
+    #playlists .ptext {
+        height: auto;
+        overflow: hidden;
+        background-color: #0D8DFB;
+        text-align: center;
+    }
+    
+    #playlists h3 {
+        display: contents;
     }
 
     #playlists .tab {
@@ -561,10 +568,39 @@ audio[controls] {
     }
 
     #curated div {
-        width: 415px;
+        width: 419px;
+        height: 450px;
         overflow-x: hidden;
+        overflow: auto;
+        display: block;
     }
 
+    #curated img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        width: 40%;
+        height: auto;
+        float: left;
+    }
 
+    #curated a {
+        display: flex;
+        flex-direction: row;
+    }
 
+    #curated .ptext {
+        height: auto;
+        overflow: hidden;
+        background-color: #020659;
+        text-align: center;
+    }
+
+    #curated h3 {
+        display: contents;
+    }
+
+    #curated .tab {
+        align-self: flex-end;
+    }
 }
