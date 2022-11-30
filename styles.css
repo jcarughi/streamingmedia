@@ -525,8 +525,10 @@ audio[controls] {
     }
 
     #playlists img {
-        margin-top: 0;
-        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        width: 40%;
         height: auto;
         float: left;
     }
@@ -539,9 +541,13 @@ audio[controls] {
         display: block;
     }
 
-    #playlists p {
-        margin-bottom: 40px;
-        margin-right: 5px;
+    #playlists a {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #playlists p, #playlists h3 {
+        
     }
 
     #playlists .tab {
